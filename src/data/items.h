@@ -2594,18 +2594,10 @@ const struct Item gItems[] =
 
     [ITEM_DYNITE_ORE] =
     {
-<<<<<<< HEAD
-        .name = _("MENTAL HERB"),
-        .itemId = ITEM_MENTAL_HERB,
-        .price = 100,
-        .holdEffect = HOLD_EFFECT_MENTAL_HERB,
-        .description = sMentalHerbDesc,
-=======
         .name = _("Dynite Ore"),
         .itemId = ITEM_DYNITE_ORE,
         .price = 20,
         .description = sDyniteOreDesc,
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -3017,18 +3009,10 @@ const struct Item gItems[] =
 
     [ITEM_DUBIOUS_DISC] =
     {
-<<<<<<< HEAD
-        .name = _("UP-GRADE"),
-        .itemId = ITEM_UP_GRADE,
-        .price = 2100,
-        .holdEffect = HOLD_EFFECT_UPGRADE,
-        .description = sUpGradeDesc,
-=======
         .name = _("Dubious Disc"),
         .itemId = ITEM_DUBIOUS_DISC,
         .price = 2000,
         .description = sDubiousDiscDesc,
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -3109,18 +3093,10 @@ const struct Item gItems[] =
 
     [ITEM_LOVE_SWEET] =
     {
-<<<<<<< HEAD
-        .name = _("STICK"),
-        .itemId = ITEM_STICK,
-        .price = 200,
-        .holdEffect = HOLD_EFFECT_LEEK,
-        .description = sStickDesc,
-=======
         .name = _("Love Sweet"),
         .itemId = ITEM_LOVE_SWEET,
         .price = 500,
         .description = sLoveSweetDesc,
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

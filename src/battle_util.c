@@ -4958,7 +4958,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     }
                 }
                 break;
-<<<<<<< HEAD
             }
 
             if (effect == 1) // Drain Hp ability.
@@ -4968,10 +4967,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 #else
                 if (BATTLER_MAX_HP(battler))
 #endif
-=======
-            case HOLD_EFFECT_MENTAL_HERB:
-                if (gBattleMons[battlerId].status2 & STATUS2_INFATUATION)
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
                 {
                     if ((gProtectStructs[gBattlerAttacker].notFirstStrike))
                         gBattlescriptCurrInstr = BattleScript_MonMadeMoveUseless;
@@ -5446,7 +5441,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     gBattlescriptCurrInstr = BattleScript_SandSpitActivates;
                     effect++;
                 }
-<<<<<<< HEAD
             }
             break;
         case ABILITY_PERISH_BODY:
@@ -5458,11 +5452,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && !(gStatuses3[gBattlerAttacker] & STATUS3_PERISH_SONG))
             {
                 if (!(gStatuses3[battler] & STATUS3_PERISH_SONG))
-=======
-                break;
-            case HOLD_EFFECT_MENTAL_HERB:
-                if (gBattleMons[battlerId].status2 & STATUS2_INFATUATION)
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
                 {
                     gStatuses3[battler] |= STATUS3_PERISH_SONG;
                     gDisableStructs[battler].perishSongTimer = 3;

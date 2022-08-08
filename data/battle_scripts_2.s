@@ -47,11 +47,8 @@ BattleScript_SafariBallThrow::
 	handleballthrow
 
 BattleScript_SuccessBallThrow::
-<<<<<<< HEAD
 	setbyte sMON_CAUGHT, TRUE
 	jumpifhalfword CMP_EQUAL, gLastUsedItem, ITEM_SAFARI_BALL, BattleScript_PrintCaughtMonInfo
-=======
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
 	incrementgamestat GAME_STAT_POKEMON_CAPTURES
 BattleScript_PrintCaughtMonInfo::
 	printstring STRINGID_GOTCHAPKMNCAUGHT

@@ -1206,7 +1206,6 @@ static const u8 sPickupProbabilities[] =
     30, 40, 50, 60, 70, 80, 90, 94, 98
 };
 
-<<<<<<< HEAD
 static const u8 sTerrainToType[BATTLE_TERRAIN_COUNT] =
 {
     [BATTLE_TERRAIN_GRASS]            = TYPE_GRASS,
@@ -1239,20 +1238,6 @@ static const u8 sTerrainToType[BATTLE_TERRAIN_COUNT] =
     [BATTLE_TERRAIN_MOUNTAIN]         = TYPE_ROCK,
     [BATTLE_TERRAIN_PLAIN]            = TYPE_NORMAL,
 #endif
-=======
-static const u8 sTerrainToType[] =
-{
-    [BATTLE_TERRAIN_GRASS]      = TYPE_GRASS,
-    [BATTLE_TERRAIN_LONG_GRASS] = TYPE_GRASS,
-    [BATTLE_TERRAIN_SAND]       = TYPE_GROUND,
-    [BATTLE_TERRAIN_UNDERWATER] = TYPE_WATER,
-    [BATTLE_TERRAIN_WATER]      = TYPE_WATER,
-    [BATTLE_TERRAIN_POND]       = TYPE_WATER,
-    [BATTLE_TERRAIN_MOUNTAIN]   = TYPE_ROCK,
-    [BATTLE_TERRAIN_CAVE]       = TYPE_ROCK,
-    [BATTLE_TERRAIN_BUILDING]   = TYPE_NORMAL,
-    [BATTLE_TERRAIN_PLAIN]      = TYPE_NORMAL,
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
 };
 
 // In Battle Palace, moves are chosen based on the pokemons nature rather than by the player
@@ -1921,7 +1906,6 @@ s32 CalcCritChanceStage(u8 battlerAtk, u8 battlerDef, u32 move, bool32 recordAbi
 }
 #undef BENEFITS_FROM_LEEK
 
-<<<<<<< HEAD
 s8 GetInverseCritChance(u8 battlerAtk, u8 battlerDef, u32 move)
 {
     s32 critChanceIndex = CalcCritChanceStage(battlerAtk, battlerDef, move, FALSE);
@@ -1930,16 +1914,6 @@ s8 GetInverseCritChance(u8 battlerAtk, u8 battlerDef, u32 move)
     else
         return sCriticalHitChance[critChanceIndex];
 }
-=======
-    critChance  = 2 * ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
-                + (gBattleMoves[gCurrentMove].effect == EFFECT_HIGH_CRITICAL)
-                + (gBattleMoves[gCurrentMove].effect == EFFECT_SKY_ATTACK)
-                + (gBattleMoves[gCurrentMove].effect == EFFECT_BLAZE_KICK)
-                + (gBattleMoves[gCurrentMove].effect == EFFECT_POISON_TAIL)
-                + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
-                + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBattlerAttacker].species == SPECIES_CHANSEY)
-                + 2 * (holdEffect == HOLD_EFFECT_LEEK && gBattleMons[gBattlerAttacker].species == SPECIES_FARFETCHD);
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
 
 static void Cmd_critcalc(void)
 {
@@ -3227,12 +3201,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
                         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
                     }
                     else if (gBattleMons[gBattlerAttacker].item != ITEM_NONE
-<<<<<<< HEAD
                         || gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY
-=======
-                        || gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY_E_READER
-                        || IS_ITEM_MAIL(gBattleMons[gBattlerTarget].item)
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
                         || gBattleMons[gBattlerTarget].item == ITEM_NONE)
                     {
                         gBattlescriptCurrInstr++;
@@ -12673,17 +12642,10 @@ static void Cmd_tryswapitems(void) // trick
         // can't swap if two pokemon don't have an item
         // or if either of them is an enigma berry or a mail
         else if ((gBattleMons[gBattlerAttacker].item == ITEM_NONE && gBattleMons[gBattlerTarget].item == ITEM_NONE)
-<<<<<<< HEAD
                  || !CanBattlerGetOrLoseItem(gBattlerAttacker, gBattleMons[gBattlerAttacker].item)
                  || !CanBattlerGetOrLoseItem(gBattlerAttacker, gBattleMons[gBattlerTarget].item)
                  || !CanBattlerGetOrLoseItem(gBattlerTarget, gBattleMons[gBattlerTarget].item)
                  || !CanBattlerGetOrLoseItem(gBattlerTarget, gBattleMons[gBattlerAttacker].item))
-=======
-                 || gBattleMons[gBattlerAttacker].item == ITEM_ENIGMA_BERRY_E_READER
-                 || gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY_E_READER
-                 || IS_ITEM_MAIL(gBattleMons[gBattlerAttacker].item)
-                 || IS_ITEM_MAIL(gBattleMons[gBattlerTarget].item))
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
         {
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         }
@@ -13638,10 +13600,7 @@ u8 GetCatchingBattler(void)
 static void Cmd_handleballthrow(void)
 {
     u8 ballMultiplier = 10;
-<<<<<<< HEAD
     s8 ballAddition = 0;
-=======
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
 
     if (gBattleControllerExecFlags)
         return;
@@ -13665,18 +13624,14 @@ static void Cmd_handleballthrow(void)
     {
         u32 odds, i;
         u8 catchRate;
-<<<<<<< HEAD
-    
-        gLastThrownBall = gLastUsedItem;
-=======
 
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
+        gLastThrownBall = gLastUsedItem;
+
         if (gBattleTypeFlags & BATTLE_TYPE_SAFARI)
             catchRate = gBattleStruct->safariCatchFactor * 1275 / 100;
         else
             catchRate = gBaseStats[gBattleMons[gBattlerTarget].species].catchRate;
 
-<<<<<<< HEAD
         #if defined POKEMON_EXPANSION && defined ITEM_EXPANSION
         if (gBaseStats[gBattleMons[gBattlerTarget].species].flags & FLAG_ULTRA_BEAST)
         {
@@ -13691,15 +13646,10 @@ static void Cmd_handleballthrow(void)
 
         switch (gLastUsedItem)
         {
-=======
-        switch (gLastUsedItem)
-        {
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
         case ITEM_ULTRA_BALL:
             ballMultiplier = 20;
         case ITEM_GREAT_BALL:
         case ITEM_SAFARI_BALL:
-<<<<<<< HEAD
         #ifdef ITEM_EXPANSION
         case ITEM_SPORT_BALL:
         #endif
@@ -13869,35 +13819,6 @@ static void Cmd_handleballthrow(void)
             catchRate = 1;
         else
             catchRate = catchRate + ballAddition;
-=======
-            ballMultiplier = 15;
-        case ITEM_NET_BALL:
-            if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_BUG))
-                ballMultiplier = 30;
-            break;
-        case ITEM_DIVE_BALL:
-            if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
-                ballMultiplier = 35;
-            break;
-        case ITEM_NEST_BALL:
-            if (gBattleMons[gBattlerTarget].level < 40)
-            {
-                ballMultiplier = 40 - gBattleMons[gBattlerTarget].level;
-                if (ballMultiplier <= 9)
-                    ballMultiplier = 10;
-            }
-            break;
-        case ITEM_REPEAT_BALL:
-            if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species), FLAG_GET_CAUGHT))
-                ballMultiplier = 30;
-            break;
-        case ITEM_TIMER_BALL:
-            ballMultiplier = gBattleResults.battleTurnCounter + 10;
-            if (ballMultiplier > 40)
-                ballMultiplier = 40;
-            break;
-        }
->>>>>>> cef730e451d6f988cedb3bbb628ebcfec9656e8f
 
         odds = (catchRate * ballMultiplier / 10)
             * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)

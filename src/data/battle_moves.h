@@ -2410,17 +2410,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .target = MOVE_TARGET_USER,
         .priority = 0,
         .flags = FLAG_SNATCH_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-<<<<<<< HEAD
         .split = SPLIT_STATUS,
         .zMovePower = 0,
         .zMoveEffect = Z_EFFECT_RESET_STATS,
-=======
->>>>>>> e3d042bee9303d513cf7a1ddb3ddaef91a16d83a
     },
 
     [MOVE_HIGH_JUMP_KICK] =
     {
-<<<<<<< HEAD
         #if B_UPDATED_MOVE_DATA >= GEN_5
             .power = 130,
             .pp = 10,
@@ -2434,8 +2430,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .pp = 20,
             .zMovePower = 60,
         #endif
-=======
->>>>>>> e3d042bee9303d513cf7a1ddb3ddaef91a16d83a
         .effect = EFFECT_RECOIL_IF_MISS,
         .type = TYPE_FIGHTING,
         .accuracy = 90,

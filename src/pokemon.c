@@ -49,8 +49,13 @@
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/trainers.h"
+<<<<<<< HEAD
 #include "constants/weather.h"
 #include "constants/battle_config.h"
+=======
+#include "constants/battle_config.h"
+#include "constants/weather.h"
+>>>>>>> 601744e4ebc8f5b4d1bf1f10575d68ea9d4a36f6
 
 struct SpeciesItem
 {

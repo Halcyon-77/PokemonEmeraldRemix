@@ -3201,7 +3201,11 @@ void SetMoveEffect(bool32 primary, u32 certain)
                         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
                     }
                     else if (gBattleMons[gBattlerAttacker].item != ITEM_NONE
+<<<<<<< HEAD
+                        || gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY_E_READER
+=======
                         || gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY
+>>>>>>> 601744e4ebc8f5b4d1bf1f10575d68ea9d4a36f6
                         || gBattleMons[gBattlerTarget].item == ITEM_NONE)
                     {
                         gBattlescriptCurrInstr++;
@@ -13624,9 +13628,14 @@ static void Cmd_handleballthrow(void)
     {
         u32 odds, i;
         u8 catchRate;
+<<<<<<< HEAD
+    
+        gLastThrownBall = gLastUsedItem;
+=======
 
         gLastThrownBall = gLastUsedItem;
 
+>>>>>>> 601744e4ebc8f5b4d1bf1f10575d68ea9d4a36f6
         if (gBattleTypeFlags & BATTLE_TYPE_SAFARI)
             catchRate = gBattleStruct->safariCatchFactor * 1275 / 100;
         else
